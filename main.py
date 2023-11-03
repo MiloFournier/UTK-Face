@@ -35,9 +35,8 @@ for image in os.listdir(path):
     # We get the 2nd element of the file name -> gender
     gender = image.split("_")[1]
 
-    # We read the image and convert to RGB for display
+    # We read the image
     image = cv2.imread(str(path) + "/" + str(image))
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # We add each element to their corresponding array
     ages.append(np.array(age))

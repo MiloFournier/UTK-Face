@@ -6,21 +6,21 @@
 
 | Section | Description |
 | ------- | ----------- |
-| Project Description | Quick introduction |
-| File Structure | Dataset to download & structure |
-| Gender Model | Describes this classification model |
-| Age Model | Describes this regression model |
-| Epochs | How to change the epochs parameter |
-| Predictions | How to choose which model to use |
+| 1. Project Description | Quick introduction |
+| 2. File Structure | Dataset to download & structure |
+| 3. Gender Model | Describes this classification model |
+| 4. Age Model | Describes this regression model |
+| 5. Epochs | How to change the epochs parameter |
+| 6. Predictions | How to choose which model to use |
 
 ---
-### Project Description
+### 1. Project Description
 These 2 models were engineered to train for **age** and **gender** detection over **23,000 images**.
 
 The outputs are predicted with **87% accuracy**.
 
 ---
-### File Structure
+### 2. File Structure
 You can download the dataset [here](https://susanqq.github.io/UTKFace/).
 I have personally downloaded the Aligned&Cropped Faces one.
 
@@ -30,7 +30,7 @@ Once the dataset downloaded, you just have to put the data in a directory called
 </p>
 
 ---
-### Gender Model
+### 3. Gender Model
 This model mainly uses Conv2D, ReLU and MaxPool2D. I started with 36 nodes:
 ```py
 gender_model.add(Conv2D(36, kernel_size=3, activation="relu", input_shape=(200, 200, 3)))
@@ -53,7 +53,7 @@ gender_model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["acc
 ```
 
 ---
-### Age Model
+### 4. Age Model
 This model also mainly uses Conv2D, ReLU and MaxPool2D. I started with 36 nodes:
 ```py
 age_model.add(Conv2D(128, kernel_size=3, activation="relu", input_shape=(200, 200, 3)))
@@ -71,7 +71,7 @@ age_model.compile(optimizer="adam", loss="mse", metrics=["mae"])
 ```
 
 ---
-### Epochs
+### 5. Epochs
 As of now, the model only runs the gender model with 50 epochs. It is possible to change these parameters here:
 ```py
 run_gender_model(nb_epochs=50, run=True)
@@ -79,7 +79,7 @@ run_age_model(nb_epochs=50, run=False)
 ```
 
 ---
-### Predictions
+### 6. Predictions
 So we don't always have to run the models, they are saved in "gender_model.keras" or "age_model.keras".
 
 You can then choose the model from which you want to predict outputs:

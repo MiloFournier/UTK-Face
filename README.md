@@ -27,13 +27,13 @@ I have personally downloaded the Aligned&Cropped Faces one.
 File Structure:
 ```
 /UTK-Face
-|___ main.py
-|___ /UTKFace
-     |___ [age]_[gender]_[race]_[date&time].jpg
-     |___ [age]_[gender]_[race]_[date&time].jpg
-                      .
-                      .
-                      .
+    |___ main.py
+    |___ /UTKFace
+             |___ [age]_[gender]_[race]_[date&time].jpg
+             |___ [age]_[gender]_[race]_[date&time].jpg
+                               .
+                               .
+                               .
 ```
 
 Once the dataset downloaded, you just have to put the data in a directory called UTKFace so you have this:

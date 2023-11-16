@@ -7,7 +7,7 @@
 | Section | Description |
 | ------- | ----------- |
 | 1. Project Description | Quick introduction |
-| 2. File Structure | Dataset to download & structure |
+| 2. File Structure | Dataset to download & structure diagram |
 | 3. Gender Model | Describes this classification model |
 | 4. Age Model | Describes this regression model |
 | 5. Epochs | How to change the epochs parameter |
